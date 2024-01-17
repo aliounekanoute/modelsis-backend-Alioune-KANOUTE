@@ -85,7 +85,3 @@ Assurez-vous d'avoir les éléments suivants installés avant d'exécuter le pro
 2. **Accéder à la documentation OpenAPI dans l'environnement Docker :**
 
    La documentation OpenAPI est disponible à l'adresse `http://localhost:8080/swagger-ui.html`.
-
----
-
-N'hésitez pas à personnaliser les fichiers Dockerfile, docker-compose.yml et application.yml selon vos besoins de projet. Profitez du développement et du déploiement de votre application Spring Boot !
