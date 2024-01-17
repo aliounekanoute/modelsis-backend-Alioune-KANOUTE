@@ -85,3 +85,17 @@ Assurez-vous d'avoir les éléments suivants installés avant d'exécuter le pro
 2. **Accéder à la documentation OpenAPI dans l'environnement Docker :**
 
    La documentation OpenAPI est disponible à l'adresse `http://localhost:8080/swagger-ui.html`.
+
+### Lancer les tests avec Docker
+
+1. **Créer une image de l'application**
+
+   ```bash
+   docker build -t demo-app-test:latest . -f Dockerfile.test 
+   ```
+
+2. **Lancer un nouveau container**
+
+   ```bash
+   docker run demo-app-test
+   ```
