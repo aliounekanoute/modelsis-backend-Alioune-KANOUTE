@@ -1,0 +1,21 @@
+server:
+  error:
+    include-message: always
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_demo
+    username: postgres
+    password: postgres
+    initialize: true
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      mode: always

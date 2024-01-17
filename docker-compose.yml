@@ -1,0 +1,38 @@
+version: '3.5'
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+  db:
+    image: postgres:14-alpine
+    container_name: db
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=db_demo
+    ports:
+      - 5433:5432
+    networks:
+      - app-network
+
+  app:
+    build: .
+    depends_on:
+      - db
+    container_name: demo-app
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/db_demo
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - 8080:8080
+    volumes:
+      - ./:/app
+    networks:
+      - app-network
+
+

@@ -1,0 +1,25 @@
+jdbc:
+  driverClassName: 'org.h2.Driver'
+  url: 'jdbc:h2:mem:myDb;DB_CLOSE_DELAY:-1'
+hibernate:
+  dialect: 'org.hibernate.dialect.H2Dialect'
+  hbm2ddl:
+    auto: 'create-drop'
+spring:
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: 'org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl'
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  cloud:
+    config:
+      enabled: false
+  profiles:
+    active: test
+  datasource:
+    initialization-mode: always
+
