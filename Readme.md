@@ -16,8 +16,8 @@ Assurez-vous d'avoir les éléments suivants installés avant d'exécuter le pro
 1. **Cloner le dépôt :**
 
    ```bash
-   git clone <url-du-dépôt>
-   cd <répertoire-du-projet>
+   git clone git@github.com:aliounekanoute/modelsis-backend-Alioune-KANOUTE.git
+   cd modelsis-backend-Alioune-KANOUTE
    ```
 
 2. **Construire le projet avec Maven :**
